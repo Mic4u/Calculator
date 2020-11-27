@@ -34,6 +34,9 @@ public class JavaFXGraphController {
     @FXML
     void onLinearClick(ActionEvent event) {
 
+        grapher.clear();
+        grapher.makePlot((x)->x);
+
     }
 
     @FXML
@@ -41,13 +44,19 @@ public class JavaFXGraphController {
 
     }
 
+    private Grapher grapher;
+
     @FXML
     void initialize() {
+
+
         assert graph != null : "fx:id=\"graph\" was not injected: check your FXML file 'graph.fxml'.";
         assert xAxis != null : "fx:id=\"xAxis\" was not injected: check your FXML file 'graph.fxml'.";
         assert yAxis != null : "fx:id=\"yAxis\" was not injected: check your FXML file 'graph.fxml'.";
         assert btnLinearPlot != null : "fx:id=\"btnLinearPlot\" was not injected: check your FXML file 'graph.fxml'.";
         assert btnQuadraticPlot != null : "fx:id=\"btnQuadraticPlot\" was not injected: check your FXML file 'graph.fxml'.";
+
+        grapher = new Grapher(graph,10);
 
     }
 }
