@@ -17,7 +17,8 @@ public class JavaFXGraph extends Application {
     @Override
     public void start(Stage stage) throws IOException {
 
-        // GitHubTest
+        // GitHubTest Next attempt
+
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/graph.fxml"));
         Scene scene= new Scene(root,800,600);
         stage.setScene(scene);
